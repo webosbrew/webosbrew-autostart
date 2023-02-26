@@ -1,0 +1,10 @@
+{
+  "type": "web",
+  "vendor": "webosbrew",
+  "main": "index.html",
+  "title": "Autostart",
+  "icon": "icon.png",
+  "largeIcon": "largeIcon.png",
+  "iconColor": "#444444",
+  "supportGIP": true
+}
