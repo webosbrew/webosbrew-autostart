@@ -55,6 +55,12 @@ function log(s) {
     log("Launching autostart...");
     const res2 = await lunaCall('luna://org.webosbrew.hbchannel.service/autostart', {});
     log(`Result: ${res2.message}`);
+
+    log("Removing input app...");
+    await lunaCall('luna://com.webos.service.eim/deleteDevice', {
+      appId: 'org.webosbrew.autostart',
+    });
+
     log("Checking last input app...");
     const lastinput = await lunaCall('luna://org.webosbrew.hbchannel.service/exec', {
       command: 'cat /var/lib/eim/lastinput',

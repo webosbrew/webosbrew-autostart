@@ -11,6 +11,8 @@ This is a minimal webosbrew Homebrew Channel autostart application relying on
   that makes this work on every reboot.*
 * Launches luna://org.webosbrew.hbchannel.service/autostart (which runs as
   root and executes all startup hooks/services)
+* Removes itself from an input app list to reduce annoyance - this will only
+  modify our overlay, *not* the underlying storage.
 * If last input app in alternative storage is not our autostart app -
   automatically launch last running app
 
